@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinson Rivera | Web Personal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="title">Edinson Ernesto Rivera Bolo</h1>
+        <h2 class="subtitle">Bienvenido a mi sitio web</h2>
+    </header>
+
+    <main class="container">
+
+        <section class="photo-section">
+            <img src="Photome.png" alt="Foto de perfil" class="profile-photo">
+        </section>
+
+        <section class="about">
+            <p class="description">
+                Soy estudiante de Diseño y Desarrollo de Software con pasión por el desarrollo tecnologico.
+                creando interfaces modernas y experiencias visuales atractivas.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h3>Habilidades</h3>
+
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section class="button-section">
+            <button class="contact-button" onclick="abrirContacto()">
+                Contáctame
+            </button>
+        </section>
+
+    </main>
+
+    <div id="modalContacto" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="cerrarContacto()">&times;</span>
+
+            <h2>Información de Contacto</h2>
+
+            <div class="contact-info">
+                <strong>Correo:</strong><br>
+                edinsonernestoriverabolo@gmail.com
+            </div>
+
+            <div class="contact-info">
+                <strong>Teléfono:</strong><br>
+                +51 902 939 924
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function abrirContacto() {
+            document.getElementById("modalContacto").style.display = "flex";
+        }
+
+        function cerrarContacto() {
+            document.getElementById("modalContacto").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+
+            let modal = document.getElementById("modalContacto");
+
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
